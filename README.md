@@ -276,4 +276,4 @@ This report aims to provide business value to the company so they can make data-
 
 - Step 10 : Added all visuals needed for report.
 
-![MavenMarket_Report_Full_Report](Images/MavenMarket_Report_Full_Report.png)
+![MavenMarket_Report_Full_Report](https://github.com/user-attachments/assets/821c3ff5-5ae2-4f12-9b88-8a690ce78015)
