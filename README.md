@@ -293,7 +293,7 @@ This report aims to provide business value to the company so they can make data-
 - Table
   - At the bottom left of the report we have a table that shows various metrics per product brand for the top 30 brands by total transactions. In this table, the user can the total transactions, total profit, profit margin, and return rate for the full year of 1998. Additionally, the user can sort by any metric they want and even select a brand specifically, and the report will adapt to the choice, showing only information about that brand. Note: Only the treemap won't adapt because it is set up this way.
 
- ![Product Brand Table](https://github.com/user-attachments/assets/ad148334-9863-4ecf-8692-c527d374e37d)
+  ![Product Brand Table](https://github.com/user-attachments/assets/ad148334-9863-4ecf-8692-c527d374e37d)
 
 - Slicer
   - We have included a slicer(filter) where a user can select any particular country for which they want to see data.
