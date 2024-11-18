@@ -3,23 +3,23 @@
 ## Intro
 
 This project is provided by Maven Analytics in the Microsoft Power BI Desktop for Business Intelligence course.
-The dataset is about Maven Market, a fictional multi-national grocery chain with locations in Canada, Mexico and the United States.
+The dataset is about Maven Market, a fictional multi-national grocery chain with locations in Canada, Mexico, and the United States.
 
 ## Problem Statement
 
 This report helps the owners of Maven Market understand valuable key insights and track KPIs about their company. It specifically targets the year 1998 since that is when the data is referring to. 
 
-Some of the KPIs we track are the current month transactions, month profit and returns. We also have a detailed list of product brands where we monitor the total transactions, total profit, profit margin, and return rate.
+Some of the KPIs we track are the current month's transactions, the month's profit, and returns. We also have a detailed list of product brands where we monitor the total transactions, total profit, profit margin, and return rate.
 
 This report aims to provide business value to the company so they can make data-driven decisions in the future.
 
 
 ### Steps followed 
 
-- Step 1 : Loaded data into Power BI Desktop, dataset are stored in csv files.
-- Step 2 : Opened power query editor & in view tab under Data preview section, checked "column distribution", "column quality" & "column profile" options.
-- Step 3 : Also since by default, profile will be opened only for 1000 rows we selected "column profiling based on entire dataset".
-- Step 4 : After observing the data for errors, any minor issues were fixed. For example, in the low_fat column of the products table null values were replaced by 0. We also handled data type errors and populated the calendar table with extra columns based on the date.
+- Step 1 : Loaded data into Power BI Desktop, datasets are stored in CSV files.
+- Step 2 : Opened power query editor & in the view tab under Data preview section, checked "column distribution", "column quality" & "column profile" options.
+- Step 3 : Also since by default, profile will be opened only for 1000 rows we selected "column profiling based on the entire dataset".
+- Step 4 : After observing the data for errors, any minor issues were fixed. For example, in the low_fat column of the products table, null values were replaced by 0. We also handled data type errors and populated the calendar table with extra columns based on the date.
 - Step 5 : We proceeded to create the data model connecting the fact tables to the dimension tables with appropriate relationships in the Model view.
 - Step 6 : In the Data view, we made adjustments to some fields, for example changing the currency columns to show as currency and categorize customer_city, customer_postal_code, and customer_country.
 - Step 7 : Again in the Data view, we created calculated columns to use in our analysis. Specifically (along with DAX):
@@ -272,8 +272,59 @@ This report aims to provide business value to the company so they can make data-
 ```
 
 
-- Step 9 : Added a page-level filter for Year to be 1998.
+- Step 9 : Added a page-level filter for the Year to be 1998.
 
-- Step 10 : Added all visuals needed for report.
+- Step 10 : Added all visuals needed for the report.
+
+# Report Snapshot (Power BI Desktop)
 
 ![MavenMarket_Report_Full_Report](https://github.com/user-attachments/assets/821c3ff5-5ae2-4f12-9b88-8a690ce78015)
+
+# Description of visuals in the report
+
+- Return icon
+  - A user can select this icon to clear all filters on the report, essentially "restarting" the report.
+
+- KPI Cards
+  - At the top right of the report we included three KPI cards. For each card, we show the corresponding metric vs. the previous month's metric. By default, it shows the latest month vs the previous month. To see the comparison, a user can select any range of months from the filters (at least two). Our goal each month is to perform better than the previous month.
+
+  ![KPI Cards](https://github.com/user-attachments/assets/c9ef49d5-f2a4-4b98-98d9-607a489759df)
+
+- Table
+  - At the bottom left of the report we have a table that shows various metrics per product brand for the top 30 brands by total transactions. In this table, the user can the total transactions, total profit, profit margin, and return rate for the full year of 1998. Additionally, the user can sort by any metric they want and even select a brand specifically, and the report will adapt to the choice, showing only information about that brand. Note: Only the treemap won't adapt because it is set up this way.
+
+ ![Product Brand Table](https://github.com/user-attachments/assets/ad148334-9863-4ecf-8692-c527d374e37d)
+
+- Slicer
+  - We have included a slicer(filter) where a user can select any particular country for which they want to see data.
+
+- Map
+  - We also have a map that shows the total transactions by city.
+
+- Treemap
+  - We have a treemap where a user can see the total transactions by country by default. There is also the ability to drill down to state and city levels by clicking the double arrow button.
+
+ ![Slicer Map Treemap](https://github.com/user-attachments/assets/83d4a86d-34a3-4c40-a7b6-bf164e1e4447)
+
+- Column chart
+  - We have a column chart showing the total revenue generated for each week of the year. Note that each bar represents the week from where the start of week is the date shown.
+
+- Gauge chart
+  - This is a chart where we can compare the total revenue against the revenue target for the date selected. As mentioned above the revenue target is the previous month revenue increased by 5%.
+
+ ![Additional Charts](https://github.com/user-attachments/assets/08f0b95b-a947-488b-a14f-f88e8c2b6926)
+
+# Insights
+
+In the second page of our report the user can see some insights we uncovered. In addition, they can select the bookmark icon next to each insight to navigate to a view that shows that particular insight.
+
+![Insights](https://github.com/user-attachments/assets/88e4f918-1300-4cef-861e-2bfc1d418f66)
+
+Insights discovered:
+ - Portland hits 1,000 sales in December.
+ - High Top product returns doubled in Mexico (4 to 8), at a return rate of 1.2%.
+ - Plato products drove the strongest overall profit margin (63.55%) in 1998.
+ - Mexico achieved a staggering +29.9% increase in profits compared to its targets for December.
+
+
+
